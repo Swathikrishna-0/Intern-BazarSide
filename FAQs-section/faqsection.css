@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: "Roboto";
+  background-color: #fff;
+  color: rgb(128, 128, 128);
+}
+
+h1{
+  text-align: left;
+  margin-top:2rem 0;
+  font-size: 2.5rem;
+  color: rgb(99, 99, 99);
+  margin: 20px;
+}
+.faq-accordian{
+  width:80%;
+  max-width: 1000px;
+  margin: 2rem ;
+}
+.faq-accordion-item{
+  margin: 1rem 0;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
+}
+.faq-accordion-item-question{
+  padding:0.5rem 3rem 0.5rem 1rem;
+  min-height: 3.5rem;
+  line-height: 1.25rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.faq-accordion-item-question::after{
+  content: "\25BC";
+  font-size:1.5rem;
+  position:absolute;
+  right:1rem;
+  transition: transform 0.2s ease-in-out;
+}
+.faq-accordion-item-question.active::after{
+  color: rgb(83, 80, 255);
+  transform:rotate(180deg);
+}
+
+.faq-accordion-item-question.active p{
+  color: rgb(83, 80, 255);
+}
+
+.faq-accordion-item-answer{
+  max-height: 0;
+  overflow: hidden;
+  transition:max-height 0.2s ease-out;
+}
+
+.faq-accordion-item-answer-content::after{
+  padding:1rem;
+  line-height: 1.5rem;
+}
+
+.faq-accordion-item-question.active + .faq-accordion-item-answer{
+  max-height: auto;
+}
