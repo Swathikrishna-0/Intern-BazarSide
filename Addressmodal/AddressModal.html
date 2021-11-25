@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Address Modal</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="index.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container">
+  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Address</button>
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+        <div> 
+          <form autocomplete="off" id="inputPincode" action="/action_page.php"> 
+            <div id="inputPincodeContainer">
+                Pincode:
+                <input type="text" id="myPincode" />
+                <input type="button" value="Apply" onclick="ShowHideDiv(this)"/>
+            </div>
+          </form>
+          <script>
+            function autocomplete(inp, arr) {
+              var currentFocus;
+              inp.addEventListener("input", function(e) {
+                  var a, b, i, val = this.value;
+                  closeAllLists();
+                  if (!val) { return false;}
+                  currentFocus = -1;
+                  a = document.createElement("DIV");
+                  a.setAttribute("id", this.id + "autocomplete-list");
+                  a.setAttribute("class", "autocomplete-items");
+                  this.parentNode.appendChild(a);
+                  for (i = 0; i < arr.length; i++) {
+                    if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+                      b = document.createElement("DIV");
+                      b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+                      b.innerHTML += arr[i].substr(val.length);
+                      b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+                      b.addEventListener("click", function(e) {
+                          inp.value = this.getElementsByTagName("input")[0].value;
+                          closeAllLists();
+                      });
+                      a.appendChild(b);
+                    }
+                  }
+              });
+              inp.addEventListener("keydown", function(e) {
+                  var x = document.getElementById(this.id + "autocomplete-list");
+                  if (x) x = x.getElementsByTagName("div");
+                  if (e.keyCode == 40) {
+                    currentFocus++;
+                    addActive(x);
+                  } else if (e.keyCode == 38) { 
+                    currentFocus--;
+                    addActive(x);
+                  } else if (e.keyCode == 13) {
+                    e.preventDefault();
+                    if (currentFocus > -1) {
+                      if (x) x[currentFocus].click();
+                    }
+                  }
+              });
+              function addActive(x) {
+                if (!x) return false;
+                removeActive(x);
+                if (currentFocus >= x.length) currentFocus = 0;
+                if (currentFocus < 0) currentFocus = (x.length - 1);
+                x[currentFocus].classList.add("autocomplete-active");
+              }
+              function removeActive(x) {
+                for (var i = 0; i < x.length; i++) {
+                  x[i].classList.remove("autocomplete-active");
+                }
+              }
+              function closeAllLists(elmnt) {
+                var x = document.getElementsByClassName("autocomplete-items");
+                for (var i = 0; i < x.length; i++) {
+                  if (elmnt != x[i] && elmnt != inp) {
+                    x[i].parentNode.removeChild(x[i]);
+                  }
+                }
+              }
+              document.addEventListener("click", function (e) {
+                  closeAllLists(e.target);
+              });
+            }
+            
+            /*An array containing all the villages names: */
+            var pincodes = ["153443","184637","198234","128473","173546","239475","293846","294764","285637","213647","246375","364756","328194","392846","391728","382753","482735","492371","497654","492736","492835","594876","597234","598323","692834","723432","892432","724232","824231","917523"];
+            autocomplete(document.getElementById("myPincode"), pincodes);
+          </script>
+        </div>
+            <div id="dvVillage" style="display: none;padding:5">
+              <form autocomplete="off" action="/action_page.php">
+
+                <div style="width:300px;">
+                  Village:
+                  <input id="myInputVillage" type="text" name="myVillage">
+                  <input type="submit">
+                </div>
+              </form>
+              <script>
+                function autocomplete(inp, arr) {
+                  var currentFocus;
+                  inp.addEventListener("input", function(e) {
+                      var a, b, i, val = this.value;
+                      closeAllLists();
+                      if (!val) { return false;}
+                      currentFocus = -1;
+                      a = document.createElement("DIV");
+                      a.setAttribute("id", this.id + "autocomplete-list");
+                      a.setAttribute("class", "autocomplete-items");
+                      this.parentNode.appendChild(a);
+                      for (i = 0; i < arr.length; i++) {
+                        if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+                          b = document.createElement("DIV");
+                          b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+                          b.innerHTML += arr[i].substr(val.length);
+                          b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+                          b.addEventListener("click", function(e) {
+                              inp.value = this.getElementsByTagName("input")[0].value;
+                              closeAllLists();
+                          });
+                          a.appendChild(b);
+                        }
+                      }
+                  });
+                  inp.addEventListener("keydown", function(e) {
+                      var x = document.getElementById(this.id + "autocomplete-list");
+                      if (x) x = x.getElementsByTagName("div");
+                      if (e.keyCode == 40) {
+                        currentFocus++;
+                        addActive(x);
+                      } else if (e.keyCode == 38) { 
+                        currentFocus--;
+                        addActive(x);
+                      } else if (e.keyCode == 13) {
+                        e.preventDefault();
+                        if (currentFocus > -1) {
+                          if (x) x[currentFocus].click();
+                        }
+                      }
+                  });
+                  function addActive(x) {
+                    if (!x) return false;
+                    removeActive(x);
+                    if (currentFocus >= x.length) currentFocus = 0;
+                    if (currentFocus < 0) currentFocus = (x.length - 1);
+                    x[currentFocus].classList.add("autocomplete-active");
+                  }
+                  function removeActive(x) {
+                    for (var i = 0; i < x.length; i++) {
+                      x[i].classList.remove("autocomplete-active");
+                    }
+                  }
+                  function closeAllLists(elmnt) {
+                    var x = document.getElementsByClassName("autocomplete-items");
+                    for (var i = 0; i < x.length; i++) {
+                      if (elmnt != x[i] && elmnt != inp) {
+                        x[i].parentNode.removeChild(x[i]);
+                      }
+                    }
+                  }
+                  document.addEventListener("click", function (e) {
+                      closeAllLists(e.target);
+                  });
+                }
+                
+                /*An array containing all the villages names: */
+                var villages = ["Mawlynnong","Malana","Ravangla","Janjehli","Nako","Chitkul village","Ziro village","Lachen Village","Mokha","Amlidih","Madai Bhata","Bagtarai","Bhothipar","Rawanguda","	Riwagahan","Doma","Junwani","	Khamhariya","Hankara","abcd","bcde","cdef","efghh","zlikd","ghidf","Singarpur","Chandabank","Ballopur","Naudiha","Suraundha","Nauniatanr","Amari","Khutauna","Dharampur","Mahapur Khurd"];
+                autocomplete(document.getElementById("myInputVillage"), villages);
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+        function ShowHideDiv(btnPassport) {
+            var dvVillage = document.getElementById("dvVillage");
+            dvVillage.style.display = btnPassport.value == "Apply" ? "block" : "none";
+        }
+</script>
+<script src="index.js"></script>
+  
+</body>
+</html>
