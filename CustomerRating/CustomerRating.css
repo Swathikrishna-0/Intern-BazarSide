@@ -43,7 +43,13 @@ body{
   margin-left: 20px;
   margin-top: 10px;
 }
-
+.rating-more-button{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: row;
+  align-self: flex-end;
+}
 .rating-profile-card{
   display:flex;
   flex-direction: row;
