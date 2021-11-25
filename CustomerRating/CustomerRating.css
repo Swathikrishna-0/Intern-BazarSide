@@ -49,6 +49,7 @@ body{
   align-items: flex-end;
   flex-direction: row;
   align-self: flex-end;
+  margin-bottom:20px;
 }
 .rating-profile-card{
   display:flex;
