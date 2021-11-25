@@ -68,3 +68,8 @@ h1{
 .faq-accordion-item-question.active + .faq-accordion-item-answer{
   max-height: auto;
 }
+.faq-accordion-item-answer-content{
+  font-size: 15px;
+  padding:10px;
+  margin-top: 0px;
+}
