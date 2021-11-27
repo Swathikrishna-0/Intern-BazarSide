@@ -7,24 +7,25 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <script src="index.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
-<div class="container">
-  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Address</button>
+<div class="modal-container">
+  <button type="button" class="address-modal-button" data-toggle="modal" data-target="#myModal">Address</button>
   <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-body">
         <div> 
           <form autocomplete="off" id="inputPincode" action="/action_page.php"> 
-            <div id="inputPincodeContainer">
+            <div id="inputPincodeContainer" class="address-modal-pincode">
                 Pincode:
-                <input type="text" id="myPincode" />
-                <input type="button" value="Apply" onclick="ShowHideDiv(this)"/>
+                <input type="text" id="myPincode" onclick="ShowHideDiv2(this)" class="address-modal-input-field"/>
+                <input type="button" value="Apply" onclick="ShowHideDiv(this)" class="address-pincode-apply-btn"/>
             </div>
           </form>
+
           <script>
             function autocomplete(inp, arr) {
               var currentFocus;
@@ -96,14 +97,18 @@
             var pincodes = ["153443","184637","198234","128473","173546","239475","293846","294764","285637","213647","246375","364756","328194","392846","391728","382753","482735","492371","497654","492736","492835","594876","597234","598323","692834","723432","892432","724232","824231","917523"];
             autocomplete(document.getElementById("myPincode"), pincodes);
           </script>
+
         </div>
             <div id="dvVillage" style="display: none;padding:5">
               <form autocomplete="off" action="/action_page.php">
 
-                <div style="width:300px;">
+                <div style="width:300px;" class="address-modal-village address-modal-village-field">
                   Village:
-                  <input id="myInputVillage" type="text" name="myVillage">
-                  <input type="submit">
+                  <div class="address-modal-village-field"> 
+                    <input id="myInputVillage" type="text" name="myVillage" class="address-modal-input-field">
+                  <input type="submit" class="address-pincode-submit-btn">
+                  </div>
+                  
                 </div>
               </form>
               <script>
@@ -190,7 +195,14 @@
             dvVillage.style.display = btnPassport.value == "Apply" ? "block" : "none";
         }
 </script>
-<script src="index.js"></script>
+<script type="text/javascript">
+  function ShowHideDiv2(btnPassport) {
+      var dvVillage = document.getElementById("dvVillage");
+      dvVillage.style.display = btnPassport.value == "Apply" ? "block" : "none";
+      
+  }
+  
+</script>
   
 </body>
 </html>
