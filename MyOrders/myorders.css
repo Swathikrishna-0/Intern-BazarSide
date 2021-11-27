@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+body{
+  font-family: "Roboto";
+  background-color: #fff;
+}
+.myorders-page-container{
+  margin: 5px;
+  display: flex;
+  flex-direction: row;
+}
+.myorders-suggestion{
+  display: block;
+}
+@media screen and  (min-width:0px) and (max-width:768px)  {
+  .myorders-suggestion{
+    display: none;
+  }
+}
+.myorders-search{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.myorders-search input { 
+  text-indent: 30px;
+  font-family:  FontAwesome, sans-serif;
+  border-radius: 30px;
+  height:50px;
+  padding:10px;
+  margin-bottom: 10px;
+}
+
+.myorders-suggestion-items-column{
+  background-color:rgb(216, 216, 216);
+  border-radius:10px;
+}
+.myorders-suggestion-item{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.myorders-suggestion-image-item{
+  width: 90%;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.myorders-suggestion-item-name{
+  font-family: "roboto";
+  font-weight: 700;
+  font-size: 30px;
+}
+@media screen and (min-width:700px) and (max-width:1099px){
+    .myorders-suggestion-item-name{
+      font-size: 40px;
+    }
+}
+@media screen and  (min-width:1100px) and (max-width:1200px){
+    .myorders-suggestion-item-name{
+      font-size: 60px;
+    }
+}
+.myorders-suggestion-item-descrip{
+  font-family: "roboto";
+  font-weight: 500;
+  font-size: 20px;
+}
+@media screen and (min-width:700px) and (max-width:1099px){
+  .myorders-suggestion-item-descrip{
+    font-size: 25px;
+  }
+}
+@media screen and (min-width:1200px) and (max-width:1100px){
+  .myorders-suggestion-item-descrip{
+    font-size: 30px;
+  }
+}
+.myorders-suggestion-price{
+  font-family: "roboto";
+  font-weight: 700;
+  font-size: 30px;
+  color: rgb(15, 175, 0)
+}
+.myorders-heading{
+  color: rgb(95, 93, 93);
+  font-family: "roboto";
+  font-size: 60px;
+  font-weight: 800;
+}
+@media screen and (min-width:700px) and (max-width:1099px){
+  .myorders-heading{
+    font-size: 70px;
+  }
+}
+@media screen and (min-width:1200px) and (max-width:1100px){
+  .myorders-suggestion-item-descrip{
+    font-size: 80px;
+  }
+}
+.myorders-order-card-item{
+  border-width: 2px;
+  border-color: rgb(0, 26, 255);
+  border-style: solid;
+  width:95%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.myorders-bucket-list{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+}
+.myorders-image{
+  width: 40%;
+  height: 40%;
+  margin: 10px;
+}
+.myorder-order-short-details{
+  display: flex;
+  flex-direction: column;
+  
+}
+.myorders-order-id{
+  font-family: "roboto";
+  font-weight: 500;
+  font-size: 15px;
+}
+.myorder-button{
+  width:90%;
+  border-width: 2px;
+  border-radius: 5px;
+  border-color: rgb(0, 26, 255);
+  margin-top:10px;
+  margin-bottom:10px;
+  height:50px;
+  background-color:rgb(255, 239, 11);
+}
+.myorders-button-container{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
