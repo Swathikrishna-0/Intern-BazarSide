@@ -1,0 +1,109 @@
+
+@import url("https://fonts.googleapis.com/css?family=Lato");
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: "Roboto";
+  background-color: #fff;
+}
+.trackingprogress-events li { 
+  display: flex; 
+  color: #999;
+}
+
+.trackingprogress-events p { 
+  position: relative;  
+}
+
+.trackingprogress-events p::after { 
+   content: "";
+   position: absolute;
+   z-index: 2;
+   right: 0;
+   top: 0;
+   transform: translateX(50%);
+   border-radius: 50%;
+   background: #fff;
+   border: 1px #ccc solid;
+   width: .8em;
+   height: .8em;
+  
+}
+
+.trackingprogress-events span {
+  padding: 0 1.5em 1.5em 1.5em;
+  position: relative;
+}
+
+.trackingprogress-events span::before {
+   content: "";
+   position: absolute;
+   z-index: 1;
+   left: 0;
+   height: 100%;
+   border-left: 1px rgb(60, 255, 1) solid;
+}
+
+.trackingprogress-events strong {
+   display: block;
+   font-weight: bolder;
+}
+
+.trackingprogress-events { margin: 1em; width: 50%; }
+.trackingprogress-events, 
+.trackingprogress-events *::before, 
+.trackingprogress-events *::after { box-sizing: border-box; font-family: arial; }.trackingprogress-events li { 
+  display: flex; 
+  color: #999;
+  padding-left: 10px;
+}
+
+.trackingprogress-events p { 
+  position: relative;
+  padding: 0 1.5em;  
+  
+}
+
+.trackingprogress-events p::after { 
+   content: "";
+   position: absolute;
+   z-index: 2;
+   right: 0;
+   top: 0;
+   transform: translateX(50%);
+   border-radius: 50%;
+   background: rgb(60, 255, 1);
+   border: 1px rgb(60, 255, 1) solid;
+   width: 3rem;
+   height: 3rem;
+}
+
+
+.trackingprogress-events span {
+  padding: 0 1.5em 1.5em 1.5em;
+  position: relative;
+}
+
+.trackingprogress-events span::before {
+   content: "";
+   position: absolute;
+   z-index: 1;
+   left: 0;
+   height: 100%;
+   border-left: 3px rgb(60, 255, 1) solid;
+}
+
+.trackingprogress-events strong {
+   display: block;
+   font-weight: bolder;
+}
+
+.trackingprogress-events{ margin: 1em; width: 50%; }
+.trackingprogress-events, 
+.trackingprogress-events *::before, 
+.trackingprogress-events *::after { box-sizing: border-box; font-family: arial; }
