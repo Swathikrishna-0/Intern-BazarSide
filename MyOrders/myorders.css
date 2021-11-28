@@ -17,7 +17,7 @@ body{
 .myorders-suggestion{
   display: block;
 }
-@media screen and  (min-width:0px) and (max-width:768px)  {
+@media screen and (max-width:700px){
   .myorders-suggestion{
     display: none;
   }
