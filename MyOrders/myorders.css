@@ -65,7 +65,7 @@ body{
 }
 @media screen and  (min-width:1100px) and (max-width:1200px){
     .myorders-suggestion-item-name{
-      font-size: 60px;
+      font-size: 40px;
     }
 }
 .myorders-suggestion-item-descrip{
