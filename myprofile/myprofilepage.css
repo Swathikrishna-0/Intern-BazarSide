@@ -29,6 +29,12 @@ body {
 @media screen and (min-width: 900px) {
   .myprofile-side-bar {
     width: 320px;
+    height:100%;
+  }
+} 
+@media screen and (max-width: 900px) {
+  .myprofile-side-bar {
+    display:none;
   }
 } 
 .myprofile-logo-image{
@@ -49,6 +55,7 @@ body {
 .myprofile-text-div{
   display: inline;
 }
+
 .myprofile-option-container {
     display: flex;
     flex-direction: row;
@@ -161,12 +168,143 @@ input[type=text]{
   font-size: 20px;
   width:150px;
   height:50px;
-  margin-top:15%;
+  margin-top:10%;
   margin-right: 20%;
+  margin-bottom:50%;
 }
 .myprofile-save-button-div{
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
   align-self: flex-end;
+}
+.myprofile-profilepic{
+  border-radius: 50%;
+  width:50%;
+  height:50%;
+}
+@media screen and (min-width: 800px) {
+  .myprofile-profilepic{
+    border-radius: 50%;
+    width:30%;
+    height:30%;
+  }
+}
+.myprofile-profile-pic-div-top{
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+@media screen and (min-width: 800px) {
+  .myprofile-profile-pic-div-top{
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+  }
+}
+.myprofile-menu-icon{
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  .myprofile-menu-icon{
+    display: flex;
+    flex-direction: row;
+    display:inline-block;
+  }
+}
+@media screen and (min-width: 801px) {
+  .myprofile-menu-icon{
+    display: flex;
+    flex-direction: row;
+    display:inline-block;
+  }
+}
+.myprofile-title-div{
+  display: block;
+}
+@media screen and (max-width: 800px) {
+  .myprofile-title-div{
+    display: block;
+  }
+}
+@media screen and (min-width: 801px) {
+  .myprofile-title-div{
+    display: block;
+  }
+}
+.myprofile-menu-icon-div{
+  display: block;
+}
+
+@media screen and (max-width: 800px) {
+  .myprofile-menu-icon-div{
+    display: block;
+  }
+}
+@media screen and (min-width: 801px) {
+  .myprofile-menu-icon-div{
+    display: none;
+  }
+}
+
+
+.myprofile-rounded-box {
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.myprofile-outer {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 150px !important; /* any size */
+  max-height: 150px !important; /* any size */
+  margin: auto;
+  background-color: #6eafd4;
+  border-radius: 100%;
+  position: relative;
+  }
+
+.myprofile-inner {
+  background-color: #414141;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.imyprofile-inner:hover {
+  background-color: #000000;
+}
+.myprofile-inputfile {
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+}
+.myprofile-inputfile + label {
+    font-size: 1.25rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    overflow: hidden;
+    width: 50px;
+    height: 50px;
+    pointer-events: none;
+    cursor: pointer;
+    line-height: 50px;
+    text-align: center;
+}
+.myprofile-inputfile + label svg {
+    fill: #fff;
 }
