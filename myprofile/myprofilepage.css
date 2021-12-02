@@ -213,14 +213,16 @@ input[type=text]{
   .myprofile-menu-icon{
     display: flex;
     flex-direction: row;
-    display:inline-block;
+    justify-content: flex-start;
+    align-items:center;
   }
 }
 @media screen and (min-width: 801px) {
   .myprofile-menu-icon{
     display: flex;
     flex-direction: row;
-    display:inline-block;
+    justify-content: flex-start;
+    align-items:center;
   }
 }
 .myprofile-title-div{
@@ -238,11 +240,13 @@ input[type=text]{
 }
 .myprofile-menu-icon-div{
   display: block;
+  margin-right: 20px;
 }
 
 @media screen and (max-width: 900px) {
   .myprofile-menu-icon-div{
     display: block;
+    margin-right: 20px;
   }
 }
 @media screen and (min-width: 901px) {
@@ -250,7 +254,6 @@ input[type=text]{
     display: none;
   }
 }
-
 
 .myprofile-rounded-box {
   width: 150px;
