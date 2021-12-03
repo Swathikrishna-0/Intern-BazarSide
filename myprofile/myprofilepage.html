@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>My-Profile-Page</title>
+<meta charset="utf-8">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="myprofilepage.css">
+<script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-replace-svg="nest"></script>
+<script src="index.js"></script>
+<meta name="robots" content="noindex, follow">
+</head>
+<body>
+  <div id="mySidebar" class="myprofile-sidebar">
+    <img src="logo_5 b.png" class="myprofile-logo-image"/>
+    <ul class="myprofile-sidebar-list"> 
+      <a href="#" class="closebtn" onclick="closeNav()">×</a>
+      <li class="myprofile-sidebar-listitem myprofile-active-option"> 
+        <a href="#" target="_blank">
+        <i class="fas fa-user"></i>
+        <span class="myprofile-option-text">My Profile</span>
+        </a>
+      </li>
+      <li class="myprofile-sidebar-listitem"> 
+        <a href="#" target="_blank">
+        <i class="fas fa-home"></i>
+        <span class="myprofile-option-text">Address</span>
+        </a>
+      </li>
+      <li class="myprofile-sidebar-listitem"> 
+        <a href="#" target="_blank">
+          <i class="fas fa-shopping-cart"></i>
+        <span class="myprofile-option-text">My Orders</span>
+        </a>
+      </li>
+      <li class="myprofile-sidebar-listitem"> 
+        <a href="#" target="_blank">
+          <i class="fas fa-rupee-sign"></i>
+        <span class="myprofile-option-text">Payments</span>
+        </a>
+      </li>
+      <li class="myprofile-sidebar-listitem"> 
+        <a href="#" target="_blank">
+          <i class="fas fa-comment-dots"></i>
+        <span class="myprofile-option-text">Chat/Help</span>
+        </a>
+      </li>
+      <li class="myprofile-sidebar-listitem"> 
+        <a href="#" target="_blank">
+          <i class="fas fa-share-alt"></i>
+        <span class="myprofile-option-text">Share</span>
+        </a>
+      </li>
+    </ul>   
+</div>
+<div id="main">
+    <button id="openbtn" class="openbtn" onclick="openNav()"><i class="fa fa-bars" aria-hidden="true"></i></button>
+    <div class="myprofile-form-content ">
+        <div class="myprofile-title-div"> 
+          <h1 class="myprofile-title">My <span class="myprofile-title-span">Profile</span></h1>
+        </div>
+      <hr style="border-width: 3px; border-color: black;color: black">
+        <div class="container">
+          <div class="myprofile-profile-pic-div-top ">    
+            <div class="myprofile-rounded-box">
+              <div class="myprofile-outer">
+                <div class="myprofile-inner">
+                <input class="myprofile-inputfile myprofile-profilepic" type="file" name="pic" accept="image/*">
+                <label><svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                  <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                </svg></label>
+                </div>
+              </div>
+            </div>
+          </div> 
+          <div class="row">
+              <div class="col-10 col-sm-10 col-md-6 col-xl-5 col-lg-6">
+                <label for="firstname" class="myprofile-input-label">First Name
+                  <span class="myprofile-input-edit">&nbsp; &nbsp; &nbsp;Edit</span></label>
+                <input type="text" id="firstname" class="form-control" />
+              </div>
+              <div class="col-10 col-sm-10 col-md-6 col-xl-5 col-lg-6 myprofile-inputs">
+                <label for="lastname" class="myprofile-input-label">Last Name
+                  <span class="myprofile-input-edit">&nbsp; &nbsp; &nbsp;Edit</span></label>
+                <input type="text" id="lastname" class="form-control" />
+              </div>
+              <div class="col-10 col-sm-10 col-md-10 col-xl-10 col-lg-10 myprofile-gender-buttons myprofile-inputs myprofile-margin-input">
+                <div>
+                  <label for="lastname" class="myprofile-input-label">Gender</label><br>
+                  <input type="radio"  name="male" value="Male">
+                  <label for="male" class="myprofile-input-gender"> Male &nbsp; &nbsp;&nbsp;</label>
+                  <input type="radio" name="female" value="CSS">
+                  <label for="female" class="myprofile-input-gender"> Female &nbsp; &nbsp;&nbsp;</label>
+                  <input type="radio" name="others"  value="Others">
+                  <label for="others" class="myprofile-input-gender"> Others</label>
+                </div>
+              </div>
+              <div class="col-10 col-sm-10 col-md-6 col-xl-5 col-lg-6 myprofile-inputs myprofile-margin-input">
+                <label for="email-address" class="myprofile-input-label">Email Address
+                  <span class="myprofile-input-edit">&nbsp; Edit</span><span class="myprofile-input-edit">&nbsp; Change Password</span></label>
+                <input type="text" id="email-address" class="form-control" />
+              </div>
+              <div class="col-10 col-sm-10 col-md-6 col-xl-5 col-lg-6 myprofile-inputs myprofile-margin-input">
+                <label for="phonenumber" class="myprofile-input-label">Phone Number
+                  <span class="myprofile-input-edit">&nbsp; &nbsp; &nbsp;Edit</span></label>
+                <input type="text" id="phonenumber" class="form-control" />
+              </div>
+              <div class="col-10 col-sm-10 col-md-6 col-xl-5 col-lg-6 myprofile-inputs myprofile-margin-input">
+                <label for="Addressr" class="myprofile-input-label">Address
+                  <span class="myprofile-input-edit">&nbsp; &nbsp; &nbsp;Edit</span></label>
+                <input type="text" id="Address" class="form-control" />
+              </div> 
+            </div>
+            <div class="myprofile-save-button-div"> 
+              <button class="myprofile-save-button">Save</button>
+            </div>
+          </div>
+          </div> 
+</div>
+<script>
+    function openNav() {
+         document.getElementById("mySidebar").style.width = "15.625rem";
+         // document.getElementById("mySidebar").style.width = "15.625rem";
+         document.getElementById("main").style.marginLeft = "15.625rem";
+         document.getElementById("openbtn").style.opacity = "0";
+    }
+
+    function closeNav() {
+         document.getElementById("mySidebar").style.width = "0rem";
+         document.getElementById("main").style.marginLeft = "0rem";
+         document.getElementById("openbtn").style.opacity = "1";
+    }
+</script>
+</body>
+</html>
