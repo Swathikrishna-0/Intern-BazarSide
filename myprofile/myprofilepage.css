@@ -321,12 +321,10 @@ display: block;
 .closebtn{
 margin-bottom: 10px;
 }
-
 .myprofile-page-container-big-screen{
   display: flex;
   flex-direction: row;
 }
-
 .myprofile-sidebar1{
   display: block;
   background-color: rgb(244,226,20);
@@ -360,7 +358,6 @@ margin-bottom: 10px;
   display: block;
   transition: 0.3s;
 }
-
 .myprofile-sidebar1 a:hover {
   color: rgb(44,82,164);
 }
