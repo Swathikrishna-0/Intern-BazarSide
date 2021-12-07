@@ -32,13 +32,12 @@ justify-content: center;
 }
 .myprofile-option-text {
  color: #000000;
- font-size: 20px;
+ font-size: 18px;
  font-weight: 600;
  text-align: center;
  margin-top: 7px;
  padding: 10px;
 }
-
 
 @media screen and (min-width: 1000px) {
   .myprofile-option-text {
@@ -331,6 +330,7 @@ margin-bottom: 10px;
 .myprofile-sidebar1{
   display: block;
   background-color: rgb(244,226,20);
+  max-width: 35%;
 }
 @media screen and (max-width:900px){
   .myprofile-sidebar1{
